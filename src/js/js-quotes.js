@@ -1,3 +1,15 @@
+
+$(document).ready(function() {
+  $(".btn").click(function(){
+      $("#").hide()
+  });
+
+
+});
+
+
+
+
 var quotes = [{
     quote: '\"After all, to the well-organised mind, death is but the next great adventure.\”',
     who: 'Harry Potter and the Sorcerer\'s Stone'
