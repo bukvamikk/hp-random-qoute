@@ -1,11 +1,29 @@
-
 $(document).ready(function() {
   $(".btn").click(function(){
-      $("#").hide()
   });
-
-
 });
+
+
+var scrollSpeed = 70;
+
+    // set the default position
+    var current = 0;
+
+    // set the direction
+    var direction = 'h';
+
+    function bgscroll(){
+
+        // 1 pixel row at a time
+        current -= 1;
+
+        // move the background with backgrond-position css properties
+       $('.main-bg').css("backgroundPosition", (direction == 'h') ? current+"px 0" : "0 " + current+"px");
+
+    }
+
+    //Calls the scrolling function repeatedly
+     setInterval(bgscroll, scrollSpeed);
 
 
 
@@ -121,4 +139,5 @@ var quotes = [{
 function newQuote() {
   var randomNumber = quotes[Math.floor(Math.random() * quotes.length)];
   document.getElementById('quoteDisplay').innerHTML = randomNumber.quote + '<br>' + randomNumber.who;
+
 }
